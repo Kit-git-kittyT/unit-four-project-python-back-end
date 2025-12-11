@@ -7,7 +7,7 @@ urlpatterns = [
     path('users/login/', LoginView.as_view(), name='login'),
     path('users/token/refresh/', VerifyUserView.as_view(), name='token_refresh'),
     path('posts/', Post.as_view(), name='post-it'),
-    path('post/<int:id>/', PostDetails.as_view(), name='post-detail'),
-    path('interest/<int:interest_id>/comment/', CommentListCreate.as_view(), name='comment-list'),
-    path('interest/<int:interest_id>/comment/<int:comment_id>/', CommentDetails.as_view(), name='comment-details'),
+    path('posts/<int:id>/', PostDetails.as_view(), name='post-detail'),
+    path('posts/<int:post_id>/comment/', CommentListCreate.as_view(), name='comment-list'),
+    path('posts/<int:post_id>/comment/<int:comment_id>/', CommentDetails.as_view(), name='comment-details'),
 ]
